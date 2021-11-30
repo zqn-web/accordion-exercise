@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    .main{
+        margin: 50px 36px;
+    }
+    .content{
+        border-radius: 4px;
+        background: #ffffff;
+        position: relative;
+        min-width: 564px;
+        min-height: 59px;
+        box-shadow: 0 0 6px 0 #DDDDDD;
+        border-radius: 4px;
+        margin-bottom: 20px;
+    }
+    .content::before {
+        content: '';
+        display: block;
+        width: 4px;
+        height: 100%;
+        border-top-left-radius: 4px;
+        border-bottom-left-radius: 4px;
+        background: #318DF8;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    .content-font,.content-click{
+        font-family: PingFangSC-Regular;
+        font-size: 16px;
+        color: #333333;
+        letter-spacing: 0.53px;
+        padding: 19px;
+        box-sizing: border-box;
+        cursor: pointer;
+    }
+    .content:hover{
+        background: #F1F2F3;
+    }
+    .conten{
+        font-family: PingFangSC-Regular;
+        font-size: 14px;
+        color: #787E87;
+        letter-spacing: 0.47px;
+        padding:0 2rem 2rem 2rem;
+        margin: 0;
+        cursor: pointer;
+    }
+    .content-font::after{
+        content: '';
+        display: block;
+        width: 7px;
+        height: 7px;
+        border-top: 2px solid #989a9c;
+        border-left: 2px solid #989a9c;
+        position: absolute;
+        right: 18px;
+        top: 24px;
+        transform: rotate(-135deg);
+        transform-origin: center;
+    }
+    .content-click::after{
+        content: '';
+        display: block;
+        width: 7px;
+        height: 7px;
+        border-top: 2px solid #989a9c;
+        border-left: 2px solid #989a9c;
+        position: absolute;
+        right: 18px;
+        top: 24px;
+        transform: rotate(45deg);
+        transform-origin: center ;
+    }
+</style>
+<body>
+    <div class="main">
+        <div class="content">
+            <div class="content-font">
+                01. Intel显卡驱动导致的显示器屏幕闪烁问题：
+            </div>
+            <p class="conten" style="display: none;">
+                <span>故障现象：首次开机进入系统后显示器屏幕快速闪烁，鼠标无法移动，按Windows键无反应。</span>
+                <br>
+                    请您优先确保显示器和HDMI连接正常，重启后按F2进入BIOS查看是否闪烁。
+                <br>
+                <span>进BIOS后现象消失：</span>
+                <br>
+                    解决方法如下：
+                <br>
+                    1、首先，重启后进入系统同时按Ctrl+Alt+Delete ,按住Shift选择"重启"，依次点击"疑难解答">"启动设置">"重启"；
+                <br>
+                    2、然后，在开机时按数字"4"进入安全模式，同时按"Win键+X键"，选择“设备管理器”，找到显示适配器选中“Intel UHD Graphics”右键卸载，勾选“删除此设备的驱动程序软件”；
+                <br>                 
+                    3、选择“扫描硬件改动”确保该驱动已删除，删除完成后重启系统；
+                <br>
+                    4、最后，访问紫光计算机官方网站，下载最新Intel显卡驱动程序，更新安装即可。
+                <br>
+                <br>
+                <span>进BIOS后现象仍然存在：</span>
+                <br>
+                    可能是数据线或显示器问题导致
+                <br>
+                    1、重新插拔显示器数据线，尝试更换数据线；
+                <br>
+                    2、尝试接入另外一台显示器测试；
+                <br>
+                    3、若以上方法无法解决，请您联系紫光售后服务。
+            </p>
+        </div>
+        <div class="content">
+            <div class="content-font">
+                02. Windows 10 系统中如何将“我的电脑”图标添加在桌面上：
+            </div>
+            <p class="conten" style="display: none;">
+                <span>原因分析与解决办法</span>
+                <br>
+                    1、在桌面空白处单击鼠标右键，选择“个性化”打开；
+                <br>
+                    2、在左侧列表中选择“主题”，右侧选中“桌面图标设置”；
+                <br>
+                    3、弹出“桌面图标设置”窗口，在“桌面图标”中勾选上需要在桌面显示的图标，点击“确定”按钮；
+                <br>
+                    4、桌面上已经显示出“此电脑”图标。（网络、控制面板等图标相同操作）。
+            </p>
+        </div>  
+        <div class="content">
+            <div class="content-font">
+                03. 双显卡的计算机，如何设置优先使用独立显卡处理：
+            </div>
+            <p class="conten" style="display: none;">
+                <span>原因分析与解决办法</span>
+                <br>
+                    配置了双显卡（独立显卡+集成显卡）的计算机，默认是由Windows10系统对应用程序进行自动适配显卡类型。若单独需要对某个应用程序选择独立显卡处理，则可以手动选择由独立显卡进行数据处理，但信号输出仍旧由集成显卡输出。
+                <br>
+                    您可以按照以下操作，设置独立显卡优先对应用程序进行数据处理。
+                <br>
+                    全局设置：设置全局使用独立显卡
+                <br>
+                    1、右键点击桌面，选择“NVIDIA 控制面板”。
+                <br>
+                    2、点击“管理 3D 设置”，在“首选图形处理器”中选择“高性能 NVIDIA 处理器”，点击“应用”
+                <br>
+                    程序设置：单独设置某个程序优先使用独立显卡
+                <br>
+                    1、右键点击桌面，选择“NVIDIA 控制面板”。
+                <br>
+                    2、点击“管理 3D 设置 > 程序设置”，点击“添加”，添加需要优先使用独立显卡的程序，然后选择“高性能 NVIDIA 处理器”，点击“应用”。
+            </p>
+        </div> 
+        <div class="content">
+            <div class="content-font">
+                04. 计算机运行过程中发热量大：
+            </div>
+            <p class="conten" style="display: none;">
+                <span>原因分析与解决办法</span>
+                <br>
+                    计算机在正常使用过程中，因内部电子组件产生热量会出现发热的情况，尤其在充电、升级、玩大型游戏、看视频等高负荷场景下，计算机会产生大量热量。建议先暂停使用计算机几分钟，如果计算机发热情况仍未缓解，请您尝试以下方案：
+                <br>
+                <br>
+                    1、改善计算机工作环境及通风条件
+                <br>
+                    计算机建议工作环境温度为0~35℃，避免在温度过高或过低的环境中使用计算机；
+                <br>
+                    保持底座下方空间通畅，不宜将计算机放置在柔软、散热性不好的物体表面（如毛巾），建议放置在坚固、水平表面上使用；
+                <br>
+                    保证机身通风口通畅，避免因积灰过多影响散热。如果通风口吸附了灰尘、纸片等，请用干净软布擦拭通风口表面。
+                <br>
+                    2、关闭后台程序
+                <br>
+                    计算机发热与运行的程序数量有关，后台程序过多不仅会增大 CPU 的发热问题，还会挤占内存空间，导致在需要很多内存的时候需要花费很多的 CPU 资源去压缩分页内存，造成更严重的发热问题。因此建议关闭不使用的应用或清理后台应用。具体操作步骤如下：
+                <br>
+                    1）同时按下按键“Ctrl”、“Alt”和“Del”，调出任务管理器；
+                <br>
+                    2）点击查看 > > 按类型分组，查看应用下面的程序，选中 CPU 和内存或磁盘占用较高的程序，点结束任务，关闭后台运行的程序。
+            </p>
+        </div>
+        <div class="content">
+            <div class="content-font">
+                05. 如何启动和退出安全模式：
+            </div>
+            <p class="conten" style="display: none;">
+                <span>原因分析与解决办法</span>
+                <br>
+                    win7
+                <br>
+                    1、重启电脑时，按住Ctrl键不放，会出现系统多操作启动菜单；
+                <br>
+                    2、系统配置中，找到"引导"选项，然后单击，选择window7的引导项，然后在“安全引导”的选项前打勾，然后点击底部的“确定”保存后重启。
+                <br>
+                <br>
+                    win10
+                <br>
+                    1、设置-更新和安全-恢复-高级启动-疑难解答-高级选项-启动设置-F4重启；
+                <br>
+                    2、win+r-msconfig-引导-勾选安全引导-保存后重启
+                <br>
+                    3、启动时长摁Shift-疑难解答-高级选项-启动设置-F4重启。
+            </p>
+        </div>
+        <div class="content">
+            <div class="content-font">
+                06. PC无声音或无音频、抖动、刺耳、噼啪声或音频时断时续、间歇性音频、音频失真和白噪声：
+            </div>
+            <p class="conten" style="display: none;">
+                <span>原因分析与解决办法</span>
+                <br>
+                    1、检查音频端口是否损坏并清洁端口
+                <br>
+                    2、检查音量设置并设置默认播放设备
+                <br>
+                    3、运行Microsoft声音疑难解答，按屏幕上的说明完成故障排除过程。
+                <br>
+                    4、重新安装或更新芯片组驱动程序、音频驱动程序和 BIOS
+            </p>
+        </div>
+        <div class="content">
+            <div class="content-font">
+                07. 键盘无法正常工作：
+            </div>
+            <p class="conten" style="display: none;">
+                <span>原因分析与解决办法</span>
+                <br>
+                    1、重新安装USB电缆或无线USB接收器。
+                <br>
+                    2、在安装了无线USB或蓝牙鼠标后，安装新电池。
+                <br>
+                    3、保存所有数据，关闭所有打开的程序，然后重新启动计算机。
+            </p>
+        </div>
+        <div class="content">
+            <div class="content-font">
+                08. 网络无法连接：
+            </div>
+            <p class="conten" style="display: none;">
+                <span>可能原因：</span>
+                <br>
+                    1、网络被禁止
+                <br>
+                    2、网卡驱动未正确安装
+                <br>
+                    3、网络未正确配置
+                <br>
+                    4、BIOS中无线网卡接口未启用
+                <br>
+                <span>解决办法：</span>
+                <br>
+                    1、在网络与Internet设置里检查网卡状态；可用疑难解答进行检查
+                <br>
+                    2、在设备管理器检查网卡驱动是否异常；
+                <br>
+                    3、在网络属性中查看IP地址是否正确配置。
+                <br>
+                    4、开机时摁压F2进入BIOS，选择Device（设备）-Onboard WIFI Controller（板载WIFI控制器）-enabled（打开）-F10保存并退出。
+            </p>
+        </div>
+        <div class="content">
+            <div class="content-font">
+                09. 计算机应用一段时间后出现卡顿：
+            </div>
+            <p class="conten" style="display: none;">
+                <span>原因分析与解决办法</span>
+                <br>
+                    1、垃圾文件过多，需要定期进行系统优化，可以通过磁盘清理或者安全软件优化处理。
+                <br>
+                    2、CPU占用太多，如果打开的文件，网页过多，通过任务管理器关闭一些不常用的进程，重启电脑也可以有效的解决这类问题。
+                <br>
+                    3、内存空间过小，不足以支持应用程序运行，加大内存容量。
+            </p>
+        </div>
+        <div class="content">
+            <div class="content-font">
+                10. 在开机自检时，在LOGO画面处死机（即自检时死机）：
+            </div>
+            <p class="conten" style="display: none;">
+                <span>主机开机自检过程中死机，一直停留在logo自检画面，无法继续引导进入系统。可能原因为</span>
+                <br>
+                    1、内存导致自检画面死机
+                <br>
+                    2、光驱或硬盘导致自检画面死机
+                <br>
+                    3、外接设备导致自检画面死机（如：USB 设备、打印机、存储卡等）
+                <br>
+                    4、主机工作环境温度异常（如：温度过低、市电未接入地线等）
+                <span>解决办法:</span>
+                <br>
+                    1、检查工作环境温度：一般情况下，推荐主机在 10-25 摄氏度之间进行工作，过高或者过低均会让主机产生不良的影响
+                <br>
+                    2、释放残余电荷：关闭主机，拔掉主机电源连接线（注：笔记本需同时移除电池）。然后按主机的开机按钮并保持 5 秒钟后释放，接下来重复按 2-3 次同等时间的动作。操作完毕后，接上主机电源线并打开插排电源，重新开机观察故障是否排除？
+                <br>
+                    3、移除外接设备:在关机状态下，移除一切不必要的外接设备如：打印机、摄像头、存储卡、Express Card 等，重新开机观察故障是否排除？
+                <br>
+                    4、检查硬盘、光驱连线:可以考虑检查硬盘与光驱的数据线、电源线是否松动？在专业人士的指导下，可尝试重新插拔连线测试，观察故障是否排除？
+                <br>
+                    5、联系服务网点:如果上述操作仍然无法解决或改善问题，建议送修到就近的服务网点进行进一步检测。
+            </p>
+        </div>
+        <div class="content">
+            <div class="content-font">
+                11. 显示器屏幕闪烁、抖动或有条纹：
+            </div>
+            <p class="conten" style="display: none;">
+                <span>在实际工作环境中，系统启动过程中闪烁一下最主要囊括了以下几种原因</span>
+                <br>
+                    1、显卡驱动问题（如：显卡驱动过低、显卡VBIOS 时序设定未优化等）；
+                <br>
+                    2、当前运行的操作系统不在被支持列表中；
+                <br>
+                    3、正常现象，加载过程中要切换图形的显示模式。
+                <span>解决办法:</span>
+                <br>
+                    1、观察能否自行恢复。
+                <br>
+                    在系统启动过程中，如果出现闪烁的现象，可观察画面能否恢复至正常状态并进入操作系统？如果能够正常恢复回来，基本可以判定主机无故障。
+                <br>
+                    2、重新安装显卡驱动。在官网下载最新或正确的驱动安装并查看问题是否解决。
+                <br>
+                    3、若无法解决，联系售后人员检测处理。
+            </p>
+        </div>
+        <div class="content">
+            <div class="content-font">
+                12. 笔记本电池耗电过快：
+            </div>
+            <p class="conten" style="display: none;">
+                <span>如您在使用电脑中遇到笔记本电池耗电过快问题，请您参照以下方法排查解决：</span>
+                <br>
+                    1、调整电源按钮功能，关闭“启用快速启动”（设置>系统>电源和睡眠>其他电源设置>选择电源按钮的功能>关机设置，将“启用快速启动”取消勾选保存修改）；
+                <br>
+                    2、系统提示的电池剩余时间（电量）是瞬时的参考值，您可以通过如下方法延长电池使用时间（降低屏幕亮度、减少内置光驱使用、减少音箱使用、关闭闲置的无线网卡、蓝牙设备、调整用电模式至“节能”、“平衡”）；
+                <br>
+                    3、电池属于易耗品，使用一段时间后，续航时间会越来越短。您可以尝试通过对电池完全充放电，来校正电池电量，以下是操作方法：a、拔掉外接电源，仅用电池开机并进入BIOS。b、等待电量耗尽，直至自动关机。c、插入外接电源，并正常开机，持续充电，直至电量充满至100%。
+                <br>
+                    4、无论电池是否装在电脑内，都会有自放电的现象，每天耗电量根据机型不同略有差异；
+                <br>
+                    5、若排除以上四种情况，笔记本电池耗电依然很快，建议您联系服务网点进行报修检测、更换电池。
+            </p>
+        </div> 
+        <div class="content">
+            <div class="content-font">
+                13. 查询计算机配置：
+            </div>
+            <p class="conten" style="display: none;">
+                <span>如您在使用电脑中遇到计算机配置问题，请您参照以下方法排查解决：</span>
+                <br>
+                    1、使用windows搜索框-输入“系统信息”查看；
+                <br>
+                    2、利用运行命令查看系统信息。Windows键+R键，打开运行对话框，在里面输入cmd，按回车，在弹出的窗口输入systeminfo，按回车，即可看到系统信息；
+                <br>
+                    3、利用设备管理器查看。右键点击我的电脑，选择属性，可以看到cpu，内存等一些信息，更全面的信息需要点击设备管理器查看；
+                <br>
+                    4、利用dxdiag工具进行查看。Windows键+R键，打开运行命令对话框，在里面输入dxdiag，按回车键即可。
+            </p>
+        </div>
+        <div class="content">
+            <div class="content-font">
+                14. 电脑使用过程中总是无规律的频繁重启：
+            </div>
+            <p class="conten" style="display: none;">
+                <span>如您在使用电脑中遇到无规律的频繁重启问题，请您参照以下方法排查解决：</span>
+                <br>
+                    1、检查电压是否稳定；
+                <br>
+                    2、检查电源外接口和内部供电口是否松动；
+                <br>
+                    3、检查内存条是否松动，用橡皮擦拭内存条的“金手指”；
+                <br>
+                    4、清理机箱内部灰尘杂质；
+                <br>
+                    5、重装系统。
+            </p>
+        </div>
+        <div class="content">
+            <div class="content-font">
+                15. 显示可用内存与实际内存不符：
+            </div>
+            <p class="conten" style="display: none;">
+                <span>如您在使用电脑中遇到内存显示可用太少问题，请您参照以下方法排查解决：</span>
+                <br>
+                    1、进BIOS查看实际内存，确认内存是否识别；
+                <br>
+                    2、按下Windows键+R键，出现界面输入“msconfig”，点击确定。出现界面点击“引导”>“高级选项”，查看是否设置了“最大内存”，可将此设置为最大内存容量或者取消勾选“最大内存”选项进行测试。
+                <br>
+                    3、若以上无异常，重新插拔内存条，重启后检查是否恢复正常。
+            </p>
+        </div>
+    </div>
+    <script type="text/javascript"> 
+        let content = document.getElementsByClassName('content');
+        for (let i = 0; i < content.length; i++) {
+            content[i].onclick = function(){     
+                conten = this.children[1];
+                if (conten.style.display === "none") {
+                    for( item of content){
+                        console.log('item', item)
+                        // 获取类为content-font的div
+                        const _content = item.children[0];
+                        // 获取类为conten的p标签
+                        const _conten = item.children[1];
+                        // 类为content-font的div设置初始样式
+                        _content.className = "content-font"
+                        // 将所有display设置为none
+                        _conten.style.display = "none"
+                        // 获取到item的offsetHeight为59px,设置为初始高度
+                        item.style.height = "59px"
+                        item.style.transition = "all .3s"
+                        _content.style.color = "#333333"
+                    }
+                    conten.style.display = "block"
+                    const end1 = String(59 + conten.offsetHeight + 'px')
+                    this.style.height = end1
+                    this.children[0].className = "content-click"
+                    this.style.transition = "all .3s"
+                    console.log("conten-parent",this)
+                    // 设置点击后激活文字的颜色
+                    this.children[0].style.color = "#318DF8"
+                }else{
+                    conten.parentNode.style.height = "59px"
+                    this.style.transition = "all .3s"
+                    // console.log("conten2-parent",this)
+                    conten.style.display = "none"
+                    this.children[0].className = "content-font"
+                    this.children[0].style.color="#333333"
+                }
+            }
+        }
+    </script>
+</body>
+</html>
